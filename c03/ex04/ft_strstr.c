@@ -6,7 +6,7 @@
 /*   By: dolim <dolim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 06:22:20 by dolim             #+#    #+#             */
-/*   Updated: 2020/11/01 17:42:48 by dolim            ###   ########.fr       */
+/*   Updated: 2020/11/02 01:07:07 by dolim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strstr(char *str, char *to_find)
 	while (str[i])
 	{
 		j = 0;
-		while (to_find[j] == str[i +j])
+		while (to_find[j] == str[i + j])
 		{
 			if (to_find[j + 1] == '\0')
 			{

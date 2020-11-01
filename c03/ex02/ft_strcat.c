@@ -6,7 +6,7 @@
 /*   By: dolim <dolim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 05:01:26 by dolim             #+#    #+#             */
-/*   Updated: 2020/11/01 05:10:59 by dolim            ###   ########.fr       */
+/*   Updated: 2020/11/02 01:11:48 by dolim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strcat(char *dest, char *src)
 {
 	int i;
 	int j;
-	
+
 	i = 0;
 	while (dest[i])
 		i++;
@@ -29,4 +29,3 @@ char	*ft_strcat(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-

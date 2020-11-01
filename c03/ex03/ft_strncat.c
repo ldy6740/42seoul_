@@ -6,13 +6,13 @@
 /*   By: dolim <dolim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 05:12:44 by dolim             #+#    #+#             */
-/*   Updated: 2020/11/01 06:21:01 by dolim            ###   ########.fr       */
+/*   Updated: 2020/11/02 01:08:14 by dolim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
 

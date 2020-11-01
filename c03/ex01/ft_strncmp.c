@@ -6,18 +6,18 @@
 /*   By: dolim <dolim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 04:27:45 by dolim             #+#    #+#             */
-/*   Updated: 2020/11/01 04:55:58 by dolim            ###   ########.fr       */
+/*   Updated: 2020/11/02 01:05:53 by dolim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	while (*s1 && *s2 && n > 0)
 	{
 		if (*s1 != *s2)
-			break;
+			break ;
 		s1++;
 		s2++;
 		n--;
