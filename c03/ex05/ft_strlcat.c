@@ -5,49 +5,44 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dolim <dolim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 17:47:33 by dolim             #+#    #+#             */
-/*   Updated: 2020/11/02 01:25:50 by dolim            ###   ########.fr       */
+/*   Created: 2020/11/02 03:54:30 by dolim             #+#    #+#             */
+/*   Updated: 2020/11/02 03:58:33 by dolim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+unsigned int	ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
 	unsigned int j;
-	unsigned int c;
+	unsigned int destlen;
 
 	i = 0;
 	if (size == 0)
-	{
-		while (src[i])
-			i++;
-		return (i);
-	}
+		return (ft_strlen(src));
+	while (dest[i])
+		i++;
 	j = 0;
-	while (dest[j])
-		j++;
-	c = 0;
-	while (src[c] && c + j < size - 1)
+	destlen = i;
+	while (src[i] && j + i < size - 1)
 	{
-		dest[j + c] = src[c];
-		c++;
+		dest[i + j] = src[j];
+		j++;
 	}
-	if (c < size)
-		dest[c + j] = '\0';
-	if (size < j)
-		return (src[i] + size);
-	return (dest[j] + src[i]);
-}
-
-int		main(void)
-{
-	char dest[7];
-	char src[4];
-
-	dest[7] = "string";
-	src[4] = "src";
-	ft_strlcat(dest, src, 12);
-	return (0);
+	if (j < size)
+		dest[i + j] = '\0';
+	if (size < destlen)
+		return (ft_strlen(src) + size);
+	return (destlen + ft_strlen(src));
 }
